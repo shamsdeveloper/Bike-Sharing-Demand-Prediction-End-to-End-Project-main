@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicted Bike Sharing Demand</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 class="title">Predicted Bike Sharing Demand</h1>
+    <h2>
+        {% if demand == "Invalid input. Please check your values." %}
+            <span style="color: red;">{{ demand }}</span>
+        {% elif demand == "An error occurred during prediction." %}
+            <span style="color: red;">{{ demand }}</span>
+        {% else %}
+            Predicted Demand: <strong>{{ demand }}</strong>
+        {% endif %}
+    </h2>
+    <a href="/">Go Back</a>
+</body>
+</html>
